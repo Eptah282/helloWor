@@ -22,30 +22,77 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-Sp-XeJ">
-                                <rect key="frame" x="126.5" y="746" width="161" height="51"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Text">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="31"/>
-                                </buttonConfiguration>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qV8-Ss-Tbc">
+                                <rect key="frame" x="126.5" y="568" width="161" height="193"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpi-b9-q2s">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="51"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="161" id="GHg-J3-Oe1"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Text">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="31"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kb6-iT-Rgq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcq-fd-tW5">
+                                        <rect key="frame" x="0.0" y="71" width="161" height="51"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Text">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="31"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nds-wB-HUj"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-kw-baJ">
+                                        <rect key="frame" x="0.0" y="142" width="161" height="51"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-Sp-XeJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="51"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Show Text">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="31"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAx-gv-axR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gpi-b9-q2s" firstAttribute="leading" secondItem="qV8-Ss-Tbc" secondAttribute="leading" id="2N2-UX-dFn"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpi-b9-q2s" secondAttribute="trailing" id="vls-mo-JdE"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qV8-Ss-Tbc" secondAttribute="bottom" constant="101" id="91i-Bv-eTn"/>
                             <constraint firstItem="lZ2-Zd-Cyf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="107" id="A9V-Xo-gyY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ReI-Sp-XeJ" secondAttribute="bottom" constant="65" id="YJn-Kv-UHV"/>
-                            <constraint firstItem="ReI-Sp-XeJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rnk-IK-Zp0"/>
+                            <constraint firstItem="qV8-Ss-Tbc" firstAttribute="centerX" secondItem="lZ2-Zd-Cyf" secondAttribute="centerX" id="URS-hR-wmk"/>
                             <constraint firstItem="lZ2-Zd-Cyf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tHO-3C-JqY"/>
-                            <constraint firstItem="ReI-Sp-XeJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yOt-eK-fpd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloWorld" destination="lZ2-Zd-Cyf" id="QAk-Gt-qBt"/>
+                        <outlet property="toggleButton" destination="ReI-Sp-XeJ" id="n3b-x0-kJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14.492753623188406" y="-2.0089285714285712"/>
+            <point key="canvasLocation" x="-633" y="-108"/>
         </scene>
     </scenes>
     <resources>
